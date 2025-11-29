@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>常用国际投资法网络资源必读指南（第三版） | WHUCOIL</title>
+  <style>
+:root {
+  --bg: #f5f6fa;
+  --bg-elevated: #ffffff;
+  --border-subtle: #e0e4ee;
+  --primary: #1b3b6f;
+  --primary-soft: #e3ebff;
+  --accent: #c5943f;
+  --text-main: #1f2430;
+  --text-muted: #5b6478;
+  --sidebar-width: 270px;
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --radius-pill: 999px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC",
+               "Source Han Sans SC", "Hiragino Sans GB", "WenQuanYi Micro Hei",
+               "SimSun", "STSong", "宋体", sans-serif;
+  background: radial-gradient(circle at top left, #edf1ff 0, #f6f7fb 45%, #f8fafc 100%);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: var(--sidebar-width);
+  padding: 28px 24px;
+  background: linear-gradient(160deg, #0f172a 0%, #111827 40%, #1f2937 100%);
+  color: #e5e7eb;
+  box-shadow: 8px 0 24px rgba(15, 23, 42, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.brand-title {
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #f9fafb;
+}
+
+.brand-sub {
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.4;
+}
+
+.sidebar-divider {
+  border: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.45);
+  margin: 4px 0 10px;
+}
+
+.toc-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.toc {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.toc a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.08s ease;
+}
+
+.toc a span.index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  font-size: 11px;
+  color: #cbd5f5;
+}
+
+.toc a:hover {
+  background: rgba(55, 65, 81, 0.85);
+  transform: translateX(1px);
+}
+
+.toc a.active {
+  background: linear-gradient(135deg, #1d4ed8, #0ea5e9);
+  color: #f9fafb;
+}
+
+.toc a.active span.index {
+  border-color: rgba(239, 246, 255, 0.9);
+  background: rgba(15, 23, 42, 0.85);
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.sidebar-footer strong {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+/* Main content */
+.content {
+  flex: 1;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 32px 40px;
+}
+
+.intro {
+  background: radial-gradient(circle at top left, #e0edff 0, #f5f7ff 45%, #ffffff 100%);
+  border-radius: 24px;
+  padding: 28px 28px 24px;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(191, 219, 254, 0.7);
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.13), transparent 60%);
+  pointer-events: none;
+}
+
+.intro-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.intro-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+}
+
+.intro-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(15, 23, 42, 0.18);
+  background: rgba(15, 23, 42, 0.02);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.intro-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.intro-body {
+  font-size: 14px;
+  color: var(--text-main);
+  line-height: 1.7;
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.intro-body p + p {
+  margin-top: 8px;
+}
+
+.intro-note {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px dashed rgba(148, 163, 184, 0.9);
+  background: rgba(248, 250, 252, 0.9);
+  font-size: 13px;
+  color: #4b5563;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.intro-note-label {
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+}
+
+/* Sections */
+section {
+  margin-bottom: 36px;
+}
+
+section:last-of-type {
+  margin-bottom: 18px;
+}
+
+.section-header {
+  margin-bottom: 14px;
+}
+
+.section-kicker {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 650;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title span.index {
+  font-size: 12px;
+  padding: 2px 9px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(209, 213, 219, 0.9);
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.section-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: linear-gradient(145deg, #ffffff 0%, #f9fafb 45%, #ffffff 100%);
+  border-radius: var(--radius-lg);
+  padding: 0;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.12);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.06), transparent 55%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 卡片图片区域 */
+.card-image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 50%, #3b82f6 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image-container img {
+  transform: scale(1.05);
+}
+
+/* 图片占位符（当没有图片时显示） */
+.card-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1d4ed8 0%, #0ea5e9 50%, #3b82f6 100%);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 56px;
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.02em;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 16px 12px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 移除原来的小图标，因为现在有顶部图片区域了 */
+.card-image {
+  display: none;
+}
+
+.card-title-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 650;
+  color: #111827;
+}
+
+.card-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.card-body {
+  font-size: 13px;
+  color: var(--text-main);
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+  padding: 0 16px;
+}
+
+.card-body p + p {
+  margin-top: 4px;
+}
+
+.card-list {
+  margin-top: 6px;
+  padding-left: 16px;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+.card-list li + li {
+  margin-top: 2px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  padding: 0 16px 16px;
+  font-size: 12px;
+  color: var(--text-muted);
+  position: relative;
+  z-index: 1;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--primary-soft);
+  color: var(--primary);
+  border: 1px solid rgba(129, 140, 248, 0.7);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.tag--paid {
+  background: #fef3c7;
+  color: #92400e;
+  border-color: #fbbf24;
+}
+
+.tag--mixed {
+  background: #ecfeff;
+  color: #036672;
+  border-color: #22c3d3;
+}
+
+.rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #92400e;
+}
+
+.stars {
+  color: #f59e0b;
+  letter-spacing: 1px;
+}
+
+.link-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  font-size: 11px;
+  color: #1d4ed8;
+  margin-top: 4px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.link-badge:hover {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  text-decoration: none;
+}
+
+.link-badge span.icon {
+  font-size: 12px;
+}
+
+.section-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.footer {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 12px;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+}
+
+.footer strong {
+  color: var(--text-main);
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: static;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+  }
+  .brand-sub {
+    display: none;
+  }
+  .toc-title {
+    display: none;
+  }
+  .toc {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: flex-end;
+  }
+  .toc a {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .content {
+    padding: 18px 16px 28px;
+  }
+  .intro-body {
+    display: block;
+  }
+  .intro-body p + p {
+    margin-top: 6px;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .intro-title {
+    font-size: 20px;
+  }
+  .intro-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  .section-title {
+    font-size: 16px;
+  }
+  .card-image-container {
+    height: 140px;
+  }
+  .card-image-placeholder {
+    font-size: 42px;
+  }
+  .card-header {
+    padding: 12px 12px 10px;
+  }
+  .card-body {
+    padding: 0 12px;
+    font-size: 12px;
+  }
+  .card-footer {
+    padding: 0 12px 12px;
+  }
+  .card-title {
+    font-size: 14px;
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-title">WHUCOIL · Investment Law</div>
+        <div class="brand-sub">常用国际投资法网络资源必读指南（第三版） · 单页索引</div>
+      </div>
+
+      <div>
+        <hr class="sidebar-divider" />
+        <div class="toc-title">Sections</div>
+        <ul class="toc">
+          <li><a href="#org" class="active"><span class="index">I</span>国际组织</a></li>
+          <li><a href="#practice"><span class="index">II</span>实践跟踪</a></li>
+          <li><a href="#insights"><span class="index">III</span>观点启发</a></li>
+          <li><a href="#cases"><span class="index">IV</span>案例检索</a></li>
+          <li><a href="#treaties"><span class="index">V</span>条约检索</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div><strong>编辑：</strong>WHUCOIL 资源组</div>
+        <div>更新：2025 版（v3）</div>
+      </div>
+    </aside>
+
+    <main class="content">
+      <!-- Intro -->
+      <section class="intro" id="top">
+        <div class="intro-header">
+          <h1 class="intro-title">常用国际投资法网络资源必读指南（第三版）</h1>
+          <div class="intro-badge">Research toolkit</div>
+        </div>
+        <div class="intro-subtitle">
+          
+        </div>
+        <div class="intro-body">
+          <div>
+            <p>
+              当前，投资已取代贸易，成为全球经济的最大助推力。伴随“走出去”战略、“一带一路”倡议的实施，我国已成为国际资本流动格局中举足轻重的大国。
+              据联合国贸发会议（UNCTAD）发布的《2025年世界投资报告》显示，2024年中国对外投资流量列全球第三，吸引外资流量也高居全球第四。
+            </p>
+            <p>
+              与上述趋势相适应，国际投资法正处于发展的黄金时期，国内外对于该领域的学习与研究掀起前所未有的高潮。
+              为方便国内研究者充分利用国际投资法网络资源，武汉大学海外投资法律研究中心（Wuhan University Center of Overseas Investment Law, WHUCOIL）
+              先后于2017年、2021年发布第一、二版《常用国际投资法网络资源必读指南》，并于2025年推出第三版，对常用英文网络资源进行更新和细化。
+            </p>
+          </div>
+          <div>
+            <p>
+              本页面按照功能，将代表性资源划分为五大板块：国际组织、实践跟踪、观点启发、案例检索与条约检索。
+              每一条目均以卡片形式呈现，突出数据库标题、访问方式、资源特色与推荐指数，便于读者结合自身研究需求作出选择。
+            </p>
+            <div class="intro-note">
+              <span class="intro-note-label">使用提示：</span>
+              <span>
+                以下分类仅为方便理解与导航之用，各网站在功能与内容上存在交叉重叠。
+                请结合具体研究问题灵活搭配使用不同类型资源。
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section I: Organisations -->
+      <section id="org">
+        <header class="section-header">
+          <div class="section-kicker">Section I</div>
+          <h2 class="section-title">
+            <span class="index">一</span> 国际组织
+          </h2>
+          <p class="section-desc">
+            以国际组织官方平台为核心，获取国际投资政策、统计数据、制度框架及官方报告等一级资料。
+          </p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- UNCTAD -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/unctad.jpg" alt="联合国贸发会议" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">U</div>
+              <div class="card-title-group">
+                <h3 class="card-title">联合国贸发会议（UNCTAD）</h3>
+                <div class="card-subtitle">World Investment Report 与投资政策综合平台</div>
+                <a class="link-badge" href="http://www.unctad.org" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                作为联合国机构的官方网站，UNCTAD 几乎每个板块都与国际投资法密切相关。
+                “Topics &rarr; Investment” 集中提供有关 FDI 与跨国企业、国际投资协定、可持续发展投资政策框架、投资政策审查以及投资争端解决的
+                数据、报告与案例等核心研究资源。
+              </p>
+              <ul class="card-list">
+                <li><strong>Investment Policy Hub：</strong>涵盖投资政策框架、投资政策审阅、投资政策监测、投资法规导航、国际投资协定导航与国际投资争端解决导航等六大工具。</li>
+                <li><strong>World Investment Report：</strong>系统呈现全球与地区 FDI 流量与存量，并围绕年度主题分析国际投资政策发展趋势，为政策研究与实证分析提供“五星必读”参考。</li>
+                <li><strong>其他成果：</strong>“负责任农业投资的基本原则”、“UNCTAD 投资便利化全球行动清单”、“UNCTAD 可持续发展投资政策框架”等重要软法文件。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>核心推荐</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ICSID -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/icsid.jpg" alt="国际投资争端解决中心" /> -->
+              <div class="card-image-placeholder">I</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">I</div>
+              <div class="card-title-group">
+                <h3 class="card-title">国际投资争端解决中心（ICSID）</h3>
+                <div class="card-subtitle">《ICSID 公约》及仲裁规则官方网站</div>
+                <a class="link-badge" href="http://www.worldbank.org/icsid/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                ICSID 网站集中提供《ICSID 公约》及相关程序规则、中心处理过的投资仲裁与调解案件以及所依凭的仲裁/调解规则等，是研究 ISDS 制度设计与实践运作的官方入口。
+              </p>
+              <p>
+                通过官网可查阅中心年报、规则修订背景文件及案件统计，为追踪 ICSID 制度演进与案件动态提供权威来源。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>制度必备</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- OECD -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/oecd.jpg" alt="经济合作与发展组织" /> -->
+              <div class="card-image-placeholder">O</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">O</div>
+              <div class="card-title-group">
+                <h3 class="card-title">经济合作与发展组织（OECD）</h3>
+                <div class="card-subtitle">投资政策与国际软法枢纽</div>
+                <a class="link-badge" href="http://www.oecd.org" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                OECD 网站分布着大量与国际投资法相关的新闻、数据、政策报告与专著资源。“Investment” 模块尤其适合研究国际软法、投资与反腐败、绿色投资、投资促进与便利化以及投资与国家安全等议题。
+              </p>
+              <ul class="card-list">
+                <li>跨国公司：《跨国公司行动守则》等公司责任与合规框架。</li>
+                <li>投资政策：《投资政策框架》及各国投资政策评审报告。</li>
+                <li>反腐败：《反贿赂公约》及 2009 年建议，为投资与反腐败研究提供权威文本。</li>
+                <li>投资促进与便利化：《建立投资便利化的国际框架》。</li>
+                <li>投资与国家安全：《针对与国家安全相关的东道国投资政策的指南》。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>政策高频</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNCITRAL WGIII -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/uncitral.jpg" alt="UNCITRAL 第三工作组" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">U</div>
+              <div class="card-title-group">
+                <h3 class="card-title">UNCITRAL 第三工作组（ISDS 改革）</h3>
+                <div class="card-subtitle">投资者—国家争端解决机制改革进程</div>
+                <a class="link-badge" href="https://uncitral.un.org/en/working_groups/3/investor-state" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                联合国国际贸易法委员会第三工作组目前负责推动 ISDS 改革相关文书的起草。
+                工作组网站公开会议议程、会议报告、草案文本以及各国政府提交的意见文件，是跟踪国际制度改革谈判进展的首选窗口。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>改革前沿</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- MIGA -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/miga.jpg" alt="多边投资担保机构" /> -->
+              <div class="card-image-placeholder">M</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">M</div>
+              <div class="card-title-group">
+                <h3 class="card-title">多边投资担保机构（MIGA）</h3>
+                <div class="card-subtitle">政治风险与投资担保研究门户</div>
+                <a class="link-badge" href="http://www.miga.org/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                MIGA 网站是研究国际投资风险与海外投资保险制度的重要入口，集中展示 MIGA 公约及评论、附则与业务政策等基础制度文件，并通过年报和《投资担保指南》呈现其对政治风险与担保实践的长期观察。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★☆☆</span>
+                <span>专题推荐</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="section-meta">
+          本板块侧重国际组织官方数据与制度文件，适合作为政策分析与制度研究的起点。
+        </p>
+      </section>
+
+      <!-- Section II: Practice -->
+      <section id="practice">
+        <header class="section-header">
+          <div class="section-kicker">Section II</div>
+          <h2 class="section-title">
+            <span class="index">二</span> 实践跟踪
+          </h2>
+          <p class="section-desc">
+            聚焦投资仲裁动态、案件深度报道与实务评论，帮助研究者实时把握案件与程序发展。
+          </p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- IAReporter -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/iareporter.jpg" alt="Investment Arbitration Reporter" /> -->
+              <div class="card-image-placeholder">A</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">A</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Investment Arbitration Reporter（IAReporter）</h3>
+                <div class="card-subtitle">投资仲裁动态深度报道</div>
+                <a class="link-badge" href="http://www.iareporter.com/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                以投资者—东道国仲裁为核心的专业报道平台，对最新立案、程序进展与裁决发布进行实时追踪。
+                由于案件保密安排，许多信息在其他公开渠道难以获取，IAReporter 因而成为了解案件“第一现场”的重要来源。
+              </p>
+              <ul class="card-list">
+                <li><strong>News Headlines / News &amp; Analysis：</strong>速览与深读投资仲裁相关新闻与实务分析。</li>
+                <li><strong>Case Profiles：</strong>按案件状态、当事方、仲裁员、适用条约等条件筛选案例概况。</li>
+                <li><strong>Arbitrator Profiles：</strong>追踪活跃仲裁员的案件履历与国家背景。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--paid">邮件订阅 · 需付费全文</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>动态首选</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- TDM -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/tdm.jpg" alt="Transnational Dispute Management" /> -->
+              <div class="card-image-placeholder">T</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">T</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Transnational Dispute Management（TDM）</h3>
+                <div class="card-subtitle">跨国争端管理与投资仲裁期刊</div>
+                <a class="link-badge" href="https://www.transnational-dispute-management.com/welcome.asp" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                经同行评审的专业期刊，覆盖国际仲裁各方面议题，特别侧重投资仲裁制度与实践。
+                收录内容既包括正式裁决程序，也涵盖调解、ADR、谈判与争端管理等多元机制。
+              </p>
+              <p>
+                除学术文章外，还提供 OGEMID 仲裁讨论论坛及法律与监管资料数据库，便于研究者追踪实务发展并参与专业讨论。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>实务强推</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- GAR -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/gar.jpg" alt="Global Arbitration Review" /> -->
+              <div class="card-image-placeholder">G</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">G</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Global Arbitration Review（GAR）</h3>
+                <div class="card-subtitle">全球仲裁资讯与分析</div>
+                <a class="link-badge" href="https://globalarbitrationreview.com/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                提供国际仲裁领域新闻、专题报告与从业者视角分析。
+                “News &amp; Analysis – Investor-State arbitration” 专栏集中报道投资仲裁潜在争端、程序进展与裁决执行情况，
+                “Trending topics” 针对 ISDS 改革等热点议题作持续跟踪。
+              </p>
+              <p>
+                “GAR Arbitrator Research Tool” 则为仲裁员与律师研究提供结构化信息支持。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★☆☆</span>
+                <span>资讯补充</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kluwer Arbitration Blog -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/kluwer-blog.jpg" alt="Kluwer Arbitration Blog" /> -->
+              <div class="card-image-placeholder">K</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">K</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Kluwer Arbitration Blog</h3>
+                <div class="card-subtitle">投资法与仲裁前沿评论</div>
+                <a class="link-badge" href="https://legalblogs.wolterskluwer.com/arbitration-blog/category/investment-law/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由国际商事仲裁与投资者—国家仲裁领域的领先执业人士撰写深度评论，聚焦最新案例、制度发展与各国司法实践。
+                文章支持按关键词、司法辖区、作者与日期等多维度检索，便于研究者快速锁定相关讨论。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>观点优选</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section III: Insights -->
+      <section id="insights">
+        <header class="section-header">
+          <div class="section-kicker">Section III</div>
+          <h2 class="section-title">
+            <span class="index">三</span> 观点启发
+          </h2>
+          <p class="section-desc">
+            通过智库平台与专业数据库，从可持续发展、全球治理与社会影响等视角拓展国际投资法研究。
+          </p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- bilaterals.org -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/bilaterals.jpg" alt="bilaterals.org" /> -->
+              <div class="card-image-placeholder">B</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">B</div>
+              <div class="card-title-group">
+                <h3 class="card-title">bilaterals.org</h3>
+                <div class="card-subtitle">双边与区域贸易投资协定观察平台</div>
+                <a class="link-badge" href="http://www.bilaterals.org" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由多个民间研究与倡议组织于 2004 年共同发起，旨在对全球双边贸易与投资协定进行“雷达式”监测。
+                平台在协定文本之外，系统汇集各类新闻、博客与评论，为评估协定的社会经济与人权影响提供多元视角。
+              </p>
+              <ul class="card-list">
+                <li><strong>协定文本：</strong>覆盖 FTAs、BITs、TIFAs，按地区与主要经贸伙伴分类。</li>
+                <li><strong>Key Issues：</strong>聚焦农业与食品、企业利益、能源与环境、地缘政治与人权、知识产权、投资、劳工、服务等议题。</li>
+                <li><strong>Negotiations：</strong>跟踪 CPTPP、RCEP、AfCFTA 等重点协定谈判与生效进程。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★☆☆</span>
+                <span>批判视角</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CCSI -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/ccsi.jpg" alt="哥伦比亚可持续投资中心" /> -->
+              <div class="card-image-placeholder">C</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">C</div>
+              <div class="card-title-group">
+                <h3 class="card-title">哥伦比亚可持续投资中心（CCSI）</h3>
+                <div class="card-subtitle">可持续投资与全球发展交叉研究</div>
+                <a class="link-badge" href="http://ccsi.columbia.edu/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由哥伦比亚大学法学院与地球研究院联合设立，聚焦采掘业投资、土地与农业投资、投资法律与政策、投资与人权、能源改革与投资等关键交叉议题。
+              </p>
+              <p>
+                平台通过政策建议、项目研究、专家对话与工作备忘录等多种形式输出研究成果，其中 “Columbia FDI Perspectives” 以短文形式持续推进围绕 FDI 的公开辩论，并提供中英文版本。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>议题拓展</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- IISD -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/iisd.jpg" alt="国际可持续发展研究所" /> -->
+              <div class="card-image-placeholder">I</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">I</div>
+              <div class="card-title-group">
+                <h3 class="card-title">国际可持续发展研究所（IISD）</h3>
+                <div class="card-subtitle">可持续发展视角的投资法研究</div>
+                <a class="link-badge" href="http://www.iisd.org/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                以可持续发展为核心使命的独立研究机构，强调投资在实现可持续发展目标中的关键作用。
+                针对现有国际投资规则与政策可能对可持续发展造成的约束，IISD 提供系统性改进方案与工具。
+              </p>
+              <p>
+                在 “Investment Law &amp; Policy” 模块可获取 Investment Treaty News、专家会议报告等资源，是进入“可持续发展 × 投资法”领域的优质入口。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>交叉重点</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kluwer Arbitration (database) -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/kluwer.jpg" alt="Kluwer Arbitration" /> -->
+              <div class="card-image-placeholder">K</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">K</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Kluwer Arbitration</h3>
+                <div class="card-subtitle">国际仲裁综合数据库</div>
+                <a class="link-badge" href="https://www.kluwerarbitration.com/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由国际商事仲裁委员会、常设仲裁法院、国际仲裁学会与 Kluwer Law International 联合推出的在线数据库，
+                针对国际商事与投资仲裁提供全面覆盖。
+              </p>
+              <ul class="card-list">
+                <li>超过 2000 份双边投资协定（BITs）原文与索引。</li>
+                <li>5000 余条法院判决与 2000 余份仲裁裁决。</li>
+                <li>基于“纽约公约判决工具”的公约检索功能。</li>
+                <li>197 个国家/地区的仲裁组织、BITs、案例与相关立法信息。</li>
+                <li>100 余本专著与多种仲裁专业期刊等权威评论资料。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>综合旗舰</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section IV: Cases -->
+      <section id="cases">
+        <header class="section-header">
+          <div class="section-kicker">Section IV</div>
+          <h2 class="section-title">
+            <span class="index">四</span> 案例检索
+          </h2>
+          <p class="section-desc">
+            围绕 ISDS 实务的官方与商用数据库，为判例研究、经验总结与实证分析提供一手数据。
+          </p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- ICSID case database -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/icsid.jpg" alt="ICSID 案例数据库" /> -->
+              <div class="card-image-placeholder">I</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">I</div>
+              <div class="card-title-group">
+                <h3 class="card-title">ICSID 案例数据库</h3>
+                <div class="card-subtitle">世界银行集团官方案件库</div>
+                <a class="link-badge" href="https://icsid.worldbank.org/cases/case-database" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由 ICSID 官方建立并维护，是研究 ISDS 的核心原始数据来源。
+                包含案件基本信息、程序进展、管辖与实体裁决、和解结果以及委员会成员信息等，
+                涵盖《ICSID 公约》项下案件以及依据 UNCITRAL 等其他规则审理的部分投资仲裁案件。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>官方首选</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- UNCTAD dispute navigator -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/unctad-dispute.jpg" alt="UNCTAD 投资争端解决导航" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">U</div>
+              <div class="card-title-group">
+                <h3 class="card-title">UNCTAD 投资争端解决导航</h3>
+                <div class="card-subtitle">Investment Dispute Settlement Navigator</div>
+                <a class="link-badge" href="https://investmentpolicy.unctad.org/investment-dispute-settlement/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                覆盖已知国际投资仲裁案件，支持按案件名称、年份、国家、行业、条约、机构、仲裁员、损害赔偿与后续程序等多维度筛选，
+                便于快速构建案件样本与开展统计分析。
+              </p>
+              <p>
+                需注意其更新节奏可能滞后于部分机构或商用数据库，应与其他来源结合交叉验证。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>统计利器</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ITA Law -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/italaw.jpg" alt="ITA Law" /> -->
+              <div class="card-image-placeholder">L</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">L</div>
+              <div class="card-title-group">
+                <h3 class="card-title">ITA Law</h3>
+                <div class="card-subtitle">投资条约与投资仲裁综合数据库</div>
+                <a class="link-badge" href="https://www.italaw.com/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                汇集投资条约、投资法与投资者—东道国仲裁相关文书的综合数据库。
+                用户可在首页跟进最新裁决，在 “Browse” 模块按案由类别检索，在 “Search” 模块查找针对特定案件的各类文档。
+              </p>
+              <p>
+                “Resources” 板块同时提供欧盟投资政策文件、条约链接与新近出版物，适合作为判例研究与政策文件检索的补充来源。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>案例拓展</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Jus Mundi -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/jusmundi.jpg" alt="Jus Mundi" /> -->
+              <div class="card-image-placeholder">J</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">J</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Jus Mundi</h3>
+                <div class="card-subtitle">国际法与仲裁智能检索平台</div>
+                <a class="link-badge" href="https://jusmundi.com/en" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                在国际投资法研究上提供国际条约、仲裁规则与投资仲裁案件三大类资源，
+                通过细化的过滤器与结构化元数据大幅提升检索效率。
+              </p>
+              <p>
+                其 Wiki Notes 由经验丰富的学者与执业者撰写，可围绕具体法律概念快速定位关键问题及关联判例，是梳理概念谱系与主流观点的实用工具。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--mixed">部分开放 · 高级功能需订阅</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>智能检索</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ISLG -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/islg.jpg" alt="ISLG 投资者—东道国争端解决法律指南" /> -->
+              <div class="card-image-placeholder">S</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">S</div>
+              <div class="card-title-group">
+                <h3 class="card-title">ISLG 投资者—东道国争端解决法律指南</h3>
+                <div class="card-subtitle">Subject Navigator 精准条款检索</div>
+                <a class="link-badge" href="http://www.investorstatelawguide.com/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                以投资条约法与 ISDS 案例研究为核心的专业数据库，特别适合围绕具体条款与法律概念进行精细化检索。
+              </p>
+              <p>
+                “Subject Navigator” 将“公平与公正待遇”等关键议题细化为可检索单元，帮助用户快速定位裁决中的相关段落，
+                同时就 ICSID、NAFTA 及其他仲裁庭公开裁决提供完整文件目录与文本。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>精细研究</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Oxford Investment Claims -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/oxford.jpg" alt="Oxford Investment Claims" /> -->
+              <div class="card-image-placeholder">O</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">O</div>
+              <div class="card-title-group">
+                <h3 class="card-title">Oxford Investment Claims</h3>
+                <div class="card-subtitle">投资仲裁文书与权威评注</div>
+                <a class="link-badge" href="https://oxia.ouplaw.com/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由牛津大学出版社推出的专业数据库，将投资仲裁裁决、官方文件、专家意见与学术评论系统整合，
+                被广泛视为开展投资争端研究的核心参考资料。
+              </p>
+              <ul class="card-list">
+                <li>裁决全文与官方文件，附事实概述、仲裁庭事实认定与详细分析。</li>
+                <li>非英文判决的英文翻译与引用案例清单。</li>
+                <li>相关国内法、双边与多边协定文本。</li>
+                <li>超过 300 名仲裁员与律师的名录及其裁决链接。</li>
+                <li>国际仲裁领域权威专家的期刊文章与专著节选。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>系统深研</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section V: Treaties -->
+      <section id="treaties">
+        <header class="section-header">
+          <div class="section-kicker">Section V</div>
+          <h2 class="section-title">
+            <span class="index">五</span> 条约检索
+          </h2>
+          <p class="section-desc">
+            梳理国际投资协定、国内官方条约清单与华盛顿公约等基础制度文本，为条约研究提供结构化入口。
+          </p>
+        </header>
+
+        <div class="cards-grid">
+          <!-- UNCTAD IIA Navigator -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/unctad-iia.jpg" alt="UNCTAD International Investment Agreements Navigator" /> -->
+              <div class="card-image-placeholder">U</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">U</div>
+              <div class="card-title-group">
+                <h3 class="card-title">UNCTAD International Investment Agreements Navigator</h3>
+                <div class="card-subtitle">国际投资协定导航</div>
+                <a class="link-badge" href="https://investmentpolicy.unctad.org/international-investment-agreements" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                覆盖现有双边投资协定及与投资有关的其他协定，提供协定状态、签署与生效日期、条约关系与文本链接等关键信息。
+              </p>
+              <p>
+                可按国家或区域组织（如中国、欧盟）进行筛选，快速生成该主体参与的 IIA 概览；
+                部分协定通过 IIA Mapping Project 提供条款层面的结构化信息，如 MFN 条款、“日落条款”期限等。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>条约中枢</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- EDIT -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/edit.jpg" alt="EDIT 投资条约电子数据库" /> -->
+              <div class="card-image-placeholder">E</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">E</div>
+              <div class="card-title-group">
+                <h3 class="card-title">EDIT 投资条约电子数据库</h3>
+                <div class="card-subtitle">伯尔尼大学开放式 IIA 全文数据库</div>
+                <a class="link-badge" href="https://edit.wti.org/document/investment-treaty/search" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                SNIS 资助项目“国际法的扩散：国际投资协议的文本分析”成果之一，致力于通过提供广覆盖的 IIA 全文，
+                促进基于证据的改革与制度研究。
+              </p>
+              <ul class="card-list">
+                <li><strong>全面：</strong>收录 3400 余份 IIA 文本，包括元数据、脚注、附件与附函。</li>
+                <li><strong>统一：</strong>提供全部协定的英文译本，便于跨语言检索关键条款。</li>
+                <li><strong>机器可读与可注释：</strong>以 XML/XHTML 结构化存储，支持计算法律研究与条款级注释。</li>
+                <li><strong>开放：</strong>完全免费，主要面向学术研究与公共讨论。</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>文本研究</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- MOFCOM BIT list -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/mofcom-bit.jpg" alt="商务部：我国对外签订双边投资协定一览表" /> -->
+              <div class="card-image-placeholder">M</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">M</div>
+              <div class="card-title-group">
+                <h3 class="card-title">商务部：我国对外签订双边投资协定一览表</h3>
+                <div class="card-subtitle">中国 BIT 官方清单</div>
+                <a class="link-badge" href="https://tfs.mofcom.gov.cn/gjk/art/2011/art_20513f4a33d64e528279070a25d63050.html" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由商务部条约法律司维护的官方清单，系统列示中国政府与各国（或地区）签署的 BIT 名称、签署与生效日期及相关备注，
+                是梳理中国对外投资条约网络的权威起点。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>中国视角</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- MOFCOM FTA portal -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/mofcom-fta.jpg" alt="中国自由贸易区服务网" /> -->
+              <div class="card-image-placeholder">F</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">F</div>
+              <div class="card-title-group">
+                <h3 class="card-title">中国自由贸易区服务网</h3>
+                <div class="card-subtitle">FTA / RTA 文本与实施信息</div>
+                <a class="link-badge" href="https://fta.mofcom.gov.cn/" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                由商务部主办，集中发布中国签署的各类 FTA / RTA 文本、解释与实施情况，
+                并提供贸易、投资、服务开放、原产地规则与关税安排等配套信息，是研究中国参与区域经济安排的基础平台。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span>区域框架</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- ICSID Convention -->
+          <article class="card">
+            <div class="card-image-container">
+              <!-- 图片占位符，可以替换为实际图片 -->
+              <!-- <img src="images/icsid-convention.jpg" alt="《ICSID 公约》官方网站" /> -->
+              <div class="card-image-placeholder">C</div>
+            </div>
+            <div class="card-header">
+              <div class="card-image">C</div>
+              <div class="card-title-group">
+                <h3 class="card-title">《ICSID 公约》官方网站</h3>
+                <div class="card-subtitle">华盛顿公约及成员国信息</div>
+                <!-- 链接可根据实际需要补充官方 URL -->
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                系统呈现 1965 年《解决国家与其他国家国民之间投资争端公约》（“华盛顿公约”）的官方文本与历史资料，
+                包括英文、法文、西班牙文版本及 18 种其他语言的非官方译本。
+              </p>
+              <p>
+                网站同时提供 ICSID 成员国数据库、年度报告与案件量统计，以及四卷本公约编年史，是研究 ISDS 制度渊源与演变不可替代的基础资源。
+              </p>
+            </div>
+            <div class="card-footer">
+              <div>
+                <span class="tag">免费访问</span>
+              </div>
+              <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span>制度根基</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div>
+          <strong>资料来源：</strong>
+          武汉大学海外投资法律研究中心（WHUCOIL），黄丽萍整理（2017_v1），黄可而更新（2021_v2；2025_v3），漆彤校对。
+        </div>
+        <div>
+          <strong>联系邮箱：</strong> keerhuang1997@gmail.com
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // 简单高亮当前章节，对 GitHub Pages 无依赖
+    (function () {
+      const links = Array.from(document.querySelectorAll('.toc a'));
+      const sections = links
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+      const activate = (id) => {
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      };
+
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const offset = window.innerHeight * 0.22;
+            let currentId = null;
+            sections.forEach(sec => {
+              const rect = sec.getBoundingClientRect();
+              if (rect.top - offset <= 0) {
+                currentId = sec.id;
+              }
+            });
+            if (currentId) {
+              activate(currentId);
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
