@@ -186,6 +186,32 @@ a:hover {
   font-weight: 500;
 }
 
+.sidebar-qrcode {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.sidebar-qrcode img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+}
+
+.sidebar-qrcode-text {
+  font-size: 11px;
+  color: #9ca3af;
+  text-align: left;
+  line-height: 1.4;
+}
+
 
 /* Main content */
 .content {
@@ -678,6 +704,10 @@ section:last-of-type {
       </div>
 
       <div class="sidebar-footer">
+        <div class="sidebar-qrcode">
+          <img src="QR CODE.jpg" alt="二维码" />
+          <div class="sidebar-qrcode-text">扫码关注 <span style="color: #1e40af;">国际经济法评论</span></div>
+        </div>
         <div><strong>编辑：</strong>WHUCOIL </div>
         <div><strong>更新：</strong>v3_updated 2025</div>
       </div>
@@ -697,7 +727,7 @@ section:last-of-type {
           <div>
             <p>
               　　当前，投资已取代贸易，成为全球经济的最大助推力。伴随"走出去"战略、"一带一路"倡议的实施，我国已成为国际资本流动格局中举足轻重的大国。
-              据联合国贸发会议（UNCTAD）发布的《2025年世界投资报告》显示，2024年中国对外投资流量列全球第三，吸引外资流量也高居全球第四。
+              据联合国贸发会议（UNCTAD）发布的<a href="https://unctad.org/publication/world-investment-report-2025" target="_blank" rel="noopener">《2025年世界投资报告》</a>显示，2024年中国对外投资流量列全球第三，吸引外资流量也高居全球第四。
             </p>
             <p>
               　　与上述趋势相适应，国际投资法正处于发展的黄金时期，国内外对于该领域的学习与研究掀起前所未有的高潮。
@@ -715,7 +745,7 @@ section:last-of-type {
                 本页面按照功能，将代表性资源划分为五大板块：<strong>国际组织</strong>、<strong>实践跟踪</strong>、<strong>观点启发</strong>、<strong>案例检索</strong>与<strong>条约检索</strong>。
               每一条目均以卡片形式呈现，突出数据库标题、访问方式、资源介绍与推荐指数，便于读者结合自身研究需求作出选择。
                 以下分类仅为方便理解与导航之用，各网站在功能与内容上存在交叉重叠。
-                请结合具体研究问题灵活搭配使用不同类型资源。
+                请结合具体研究问题灵活搭配使用不同资源。
               </span>
             </div>
           </div>
@@ -743,7 +773,7 @@ section:last-of-type {
               <div class="card-image">U</div>
               <div class="card-title-group">
                 <h3 class="card-title">联合国贸发会议（UNCTAD）</h3>
-                <div class="card-subtitle">综合型网站</div>
+                <div class="card-subtitle">联合国官方网站</div>
                 <a class="link-badge" href="http://www.unctad.org" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -751,7 +781,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                作为联合国机构的官方网站，UNCTAD几乎每个板块都与国际投资法具有联系。在“主题（Topics）”模块的“投资”部分，可以搜索到很多有关FDI和跨国企业、国际投资协定、可持续发展投资政策框架、投资政策审查、投资争端解决等议题的数据、报告和案例等研究资源。
+                在“主题（Topics）”模块的“投资”部分，可以搜索到有关FDI和跨国企业、国际投资协定、可持续发展投资政策框架、投资政策审查、投资争端解决等议题的数据、报告和案例等研究资源。
               </p>
               <ul class="card-list">
                 <li><strong><a href="https://investmentpolicy.unctad.org/" target="_blank" rel="noopener">Investment Policy Hub</a>：</strong>涵盖投资政策框架（Investment Policy Framework）、投资政策审阅（Investment Policy Reviews）、投资政策监测（Investment Policy Monitor）、投资法规导航（Investment Laws Navigator）、国际投资协定导航（International Investment Agreements Navigator）与国际投资争端解决导航（Investment Dispute Settlement Navigator）等六大工具。</li>
@@ -851,7 +881,7 @@ section:last-of-type {
               <div class="card-image">U</div>
               <div class="card-title-group">
                 <h3 class="card-title">UNCITRAL 第三工作组（ISDS 改革）</h3>
-                <div class="card-subtitle">投资者—国家争端解决机制改革进程</div>
+                <div class="card-subtitle">ISDS改革第一线</div>
                 <a class="link-badge" href="https://uncitral.un.org/en/working_groups/3/investor-state" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -859,7 +889,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                联合国国际贸易法委员会第三工作组目前负责推动 ISDS 改革相关文书的起草。
+                联合国国际贸易法委员会第三工作组负责推动 ISDS 改革相关文书的起草。
                 工作组网站公开会议议程、会议报告、草案文本以及各国政府提交的意见文件，是跟踪国际制度改革谈判进展的首选窗口。
               </p>
             </div>
@@ -941,7 +971,7 @@ section:last-of-type {
             <div class="card-body">
               <p>
                 以投资者—东道国仲裁为核心的专业报道平台，对最新立案、程序进展与裁决发布进行实时追踪。
-                由于案件保密安排，许多信息在其他公开渠道难以获取，IAReporter 因而成为了解案件“第一现场”的重要来源。
+                由于案件保密安排，许多信息在其他公开渠道难以获取。
               </p>
               <ul class="card-list">
                 <li><strong>News Headlines / News &amp; Analysis：</strong>速览与深读投资仲裁相关新闻与实务分析。</li>
@@ -977,7 +1007,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                TDM是一本经同行评审的专业期刊，涵盖国际仲裁的各个方面，并特别侧重于投资仲裁。其收录的文章既涵盖正式的裁决程序（主要是投资和商业仲裁），也涉及调解和其他非诉讼纠纷解决机制（ADR）、谈判和管理方式，以便有效地管理跨国争端。此外，TDM还提供OGEMID仲裁讨论论坛、法律与监管资料数据库等，供研究者了解仲裁领域前沿信息，并可以参与相关讨论。
+                TDM是一本经同行评审的专业期刊，涵盖国际仲裁的各个方面，并特别侧重于投资仲裁。其收录的文章既涵盖正式的裁决程序（主要是投资和商业仲裁），也涉及调解和其他非诉讼纠纷解决机制（ADR）、谈判和管理方式，以便有效地管理跨国争端。此外，TDM还提供<strong>OGEMID</strong>仲裁讨论论坛、法律与监管资料数据库等，供研究者了解仲裁领域前沿信息，并可以参与相关讨论。
               </p>
             </div>
             <div class="card-footer">
@@ -1012,7 +1042,6 @@ section:last-of-type {
               </p>
               <ul class="card-list">
                 <li><strong>News &amp; Analysis – Investor-State arbitration：</strong>获取与投资仲裁相关的最新报道，内容涵盖潜在争端、仲裁情况、裁决执行等。</li>
-                <li><strong>News &amp; Analysis - Trending topics：</strong>提供时下热门的与仲裁有关的议题（如"ISDS改革"）的简讯及分析。</li>
                 <li><strong>GAR Arbitrator Research Tool：</strong>获取全球国际仲裁执业人员的详细信息。</li>
               </ul>
             </div>
@@ -1053,7 +1082,7 @@ section:last-of-type {
               </div>
               <div class="rating">
                 <span class="stars">★★★★☆</span>
-                <span>观点优选</span>
+                <span>观点精选</span>
               </div>
             </div>
           </article>
@@ -1129,7 +1158,7 @@ section:last-of-type {
                 哥伦比亚可持续投资中心（CCSI）由哥伦比亚大学法学院与哥伦比亚大学地球研究院联合创建，致力于推动可持续投资的政策与实践发展。对于国际投资法的研究者而言，网站可利用的资源最直接的就是中心所做的有关可持续投资的研究，其中最重要的是其当前重点关注的投资相关议题（如目前中心所关注的采掘业投资、土地和农业投资、投资法律与政策、投资与人权、能源改革与投资等）。对前述议题感兴趣的研究者可通过CCSI提供的相关合作性对话与专家谈话、政策和咨询意见、研究项目介绍等，了解研究的具体方向方法，以及可利用的资源和工具。其他研究成果大多也可以查阅，包括书、报告、文章，甚至工作备忘录和笔记都是公开的。
               </p>
               <ul class="card-list">
-                <li><strong>"<a href="https://ccsi.columbia.edu/investment-perspectives" target="_blank" rel="noopener">CCSI Investment Perspectives</a>"：</strong>是一个公开辩论的论坛，不定期发布与FDI相关的短篇文章，除英文版外，还提供中文版。</li>
+                <li><strong>"<a href="https://ccsi.columbia.edu/investment-perspectives" target="_blank" rel="noopener">CCSI Investment Perspectives</a>"：</strong>一个公开辩论的论坛，不定期发布与FDI相关的短篇文章，提供中英文版本。</li>
               </ul>
             </div>
             <div class="card-footer">
@@ -1160,7 +1189,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                作为一个以可持续发展为目标的独立研究机构，国际可持续发展研究所强调投资对于可持续发展的重要性，并由此开展许多可持续发展相关投资问题的研究。考虑到当前有关投资的法律、政策和国际法规则并不都是有利于可持续发展的，研究所专门从可持续发展这一视角研究投资问题，为完善投资法律和政策，以促进可持续发展，提供方法支持。
+                作为一个以可持续发展为目标的独立研究机构，国际可持续发展研究所强调投资对于可持续发展的重要性，并由此开展许多可持续发展相关投资问题的研究。
               </p>
               <ul class="card-list">
                 <li>在该网站"Focus Areas - Topics"模块"Investment Law &amp; Policy"部分，可以查阅相关期刊、报告等研究成果，如关于投资协定研究的Investment Treaty News、关于投资争端解决的专家会议的报告等等。对于研究和关注可持续发展视角下的投资问题的用户来说，该网站是一个不错的选择。</li>
@@ -1238,7 +1267,7 @@ section:last-of-type {
               <div class="card-image">I</div>
               <div class="card-title-group">
                 <h3 class="card-title">ICSID 案例数据库</h3>
-                <div class="card-subtitle">世界银行集团官方案件库</div>
+                <div class="card-subtitle">官方案件库</div>
                 <a class="link-badge" href="https://icsid.worldbank.org/cases/case-database" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -1277,7 +1306,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                国际投资争端解决导航（Investment Dispute Settlement Navigator），涵盖已知的国际投资仲裁案件，研究者可通过过滤器（包括：案件名称、年份、国家、行业、条约、机构、仲裁员、损害赔偿、违反情况、后续程序）筛选所需案件，获得相关案件的具体信息。但限于更新速度，UNCTAD案例库的统计结果可能存在一定滞后性。
+                国际投资争端解决导航涵盖已知的国际投资仲裁案件，研究者可通过过滤器（包括：案件名称、年份、国家、行业、条约、机构、仲裁员、损害赔偿、违反情况、后续程序）筛选所需案件，获得相关案件的具体信息。但限于更新速度，UNCTAD案例库的统计结果可能存在一定滞后性。
               </p>
             </div>
             <div class="card-footer">
@@ -1311,9 +1340,9 @@ section:last-of-type {
                 网站是一个关于投资条约、国际投资法和投资者-东道国投资仲裁的具有综合性的网络数据库，提供的资源主要都关于投资仲裁，因此非常有利于案例搜索。
               </p>
               <ul class="card-list">
-                <li>在"Browse"模块根据案件的分类查找所需的案例</li>
-                <li>在"Search"模块找到有关案件的各种文件。</li>
-                <li>"Resources"模块还提供欧盟投资政策文件、投资条约、其他资源的链接和与投资法有关的最新著作。</li>
+                <li>"Browse"模块：根据案件的分类查找所需的案例</li>
+                <li>"Search"模块：找到有关案件的各种文件。</li>
+                <li>"Resources"模块：提供欧盟投资政策文件、投资条约、其他资源的链接和与投资法有关的最新著作。</li>
               </ul>
             </div>
             <div class="card-footer">
@@ -1378,11 +1407,11 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                该数据库是一个有关投资条约法研究，尤其是投资者-东道国投资争端解决案例研究的网络数据库。其特点如下：
+                该数据库是一个有关投资条约法研究，尤其是投资者-东道国投资争端解决案例研究的网络数据库。
               </p>
               <ul class="card-list">
-                <li><strong>搜索工具非常强大，搜索精确度高。</strong>以其中的一种工具"Subject Navigator"为例，它列出了国际投资法的重要问题（subjects），用户可根据研究的需要，选择subject，如"公平公正待遇"，找到与之相关的仲裁案件裁决的特定段落。此外，通过其他其中工具，用户还可以找到投资仲裁庭对于某个投资条约条款的解释、有关的先例，投资条约或投资法庭对某个术语的定义或解释，等等；</li>
-                <li><strong>资料全面。</strong>所有与已公开的ICSID、NAFTA和其他临时仲裁庭所做的裁决有关的文件和资料都能在该数据库的文件目录中找到，用户可根据需要筛选。</li>
+                <li>以其中的一种工具"Subject Navigator"为例，它列出了国际投资法的重要问题（subjects），用户可根据研究的需要，选择subject，如"公平公正待遇"，找到与之相关的仲裁案件裁决的特定段落。此外，通过其他其中工具，用户还可以找到投资仲裁庭对于某个投资条约条款的解释、有关的先例，投资条约或投资法庭对某个术语的定义或解释，等等；</li>
+                <li>所有与已公开的ICSID、NAFTA和其他临时仲裁庭所做的裁决有关的文件和资料都能在该数据库的文件目录中找到，用户可根据需要筛选。</li>
               </ul>
             </div>
             <div class="card-footer">
@@ -1466,7 +1495,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                国际投资协定导航（International Investment Agreements Navigator），覆盖现有双边投资协定及与投资有关的其他协定，且提供了协定状态、签署日期、生效日期、协定文本、条约关系等信息。此外，研究者可将某一国家（如中国）或国家联盟（如欧盟）作为检索条件，获取该国家或联盟所参与的国际投资协定概况。国际投资协定导航中，部分协定已在UNCTAD投资协定分析项目（IIA Mapping Project）中被妥善梳理，研究者可在界面中直观、迅速地获取相关协定在序言、实体条款及程序条款上的规定情况，如是否包含MFN条款、"日落条款"的期限等。
+                国际投资协定导航覆盖现有双边投资协定及与投资有关的其他协定，且提供了协定状态、签署日期、生效日期、协定文本、条约关系等信息。此外，研究者可将某一国家（如中国）或国家联盟（如欧盟）作为检索条件，获取该国家或联盟所参与的国际投资协定概况。国际投资协定导航中，部分协定已在UNCTAD投资协定分析项目（IIA Mapping Project）中被妥善梳理，研究者可在界面中直观、迅速地获取相关协定在序言、实体条款及程序条款上的规定情况，如是否包含MFN条款、"日落条款"的期限等。
               </p>
             </div>
             <div class="card-footer">
@@ -1512,7 +1541,7 @@ section:last-of-type {
               </div>
               <div class="rating">
                 <span class="stars">★★★★★</span>
-                <span>文本研究</span>
+                <span>定量研究</span>
               </div>
             </div>
           </article>
@@ -1565,7 +1594,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                中国自由贸易区服务网是由 中华人民共和国商务部（MOFCOM）主办、其国际经贸关系司管理并对外提供服务的官方平台，旨在公开、系统、集中地发布中国签署的各类自由贸易协定（FTA）／区域经贸协定（RTA）的文本、解释、实施情况以及相关贸易、投资、服务开放、原产地规则、关税安排等配套信息。
+                中国自由贸易区服务网是由商务部主办的官方平台，旨在公开、系统、集中地发布中国签署的各类自由贸易协定（FTA）／区域经贸协定（RTA）的文本、解释、实施情况以及相关贸易、投资、服务开放、原产地规则、关税安排等配套信息。其中包括贸易协定下的投资章节。
               </p>
             </div>
             <div class="card-footer">
@@ -1617,10 +1646,10 @@ section:last-of-type {
       <footer class="footer">
         <div>
           <strong>资料整理：</strong>
-          <a href="https://coil.whu.edu.cn/cn/index.php" target="_blank" rel="noopener">武汉大学海外投资法律研究中心</a>（WHUCOIL），黄丽萍整理（2017_v1），<a href="https://keerh1997.github.io/" target="_blank" rel="noopener">黄可而</a>更新（2021_v2；2025_v3），<a href="https://law.whu.edu.cn/info/1234/5249.htm" target="_blank" rel="noopener">漆彤</a>校对。
+          <a href="https://coil.whu.edu.cn/cn/index.php" target="_blank" rel="noopener">武汉大学海外投资法律研究中心</a>（WHUCOIL），黄丽萍整理（2017_v1），<a href="https://keerh1997.github.io/" target="_blank" rel="noopener">黄可而</a>更新（2021_v2；2025_v3），漆彤校对。
         </div>
-        <div>
-          <strong>联系邮箱：</strong> keerhuang1997@gmail.com
+        <div style="margin-top: 8px; font-size: 12px; color: var(--text-muted); text-align: left;">
+          <span id="busuanzi_container_site_pv">访问量：<span id="busuanzi_value_site_pv"></span></span>
         </div>
       </footer>
     </main>
@@ -1662,6 +1691,7 @@ section:last-of-type {
       });
     })();
   </script>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
 
