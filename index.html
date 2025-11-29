@@ -72,12 +72,39 @@ a:hover {
   gap: 4px;
 }
 
+.brand-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  align-self: flex-start;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .brand-title {
   font-size: 18px;
   font-weight: 650;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #f9fafb;
+}
+
+.brand-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.brand-title a:hover {
+  opacity: 0.8;
 }
 
 .brand-sub {
@@ -158,6 +185,7 @@ a:hover {
   color: #e5e7eb;
   font-weight: 500;
 }
+
 
 /* Main content */
 .content {
@@ -483,25 +511,48 @@ section:last-of-type {
 .link-badge {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  padding: 3px 9px;
-  border-radius: var(--radius-pill);
-  background: #eff6ff;
-  border: 1px solid #bfdbfe;
-  font-size: 11px;
-  color: #1d4ed8;
+  gap: 6px;
+  padding: 2px 0;
+  font-size: 13px;
+  color: var(--primary);
   margin-top: 4px;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.link-badge::before {
+  content: "👉";
+  font-size: 14px;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.link-badge > span:not(.icon) {
+  text-decoration: underline;
+  text-decoration-color: rgba(27, 59, 111, 0.4);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease, text-decoration-thickness 0.2s ease;
 }
 
 .link-badge:hover {
-  background: #dbeafe;
-  border-color: #93c5fd;
-  text-decoration: none;
+  color: #0f4c8c;
+}
+
+.link-badge:hover > span:not(.icon) {
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 1.5px;
+}
+
+.link-badge:hover::before {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .link-badge span.icon {
-  font-size: 12px;
+  display: none;
 }
 
 .section-meta {
@@ -608,13 +659,15 @@ section:last-of-type {
   <div class="layout">
     <aside class="sidebar">
       <div class="brand">
-        <div class="brand-title">WHUCOIL · Investment Law</div>
-        <div class="brand-sub">常用国际投资法网络资源必读指南（第三版） · 单页索引</div>
+        <div class="brand-logo">
+          <img src="whucoil.jpg" alt="WHUCOIL" />
+        </div>
+        <div class="brand-title"><a href="https://coil.whu.edu.cn/cn/index.php" target="_blank" rel="noopener">武汉大学海外投资法律研究中心</a></div>
+        <div class="brand-sub">常用国际投资法网络资源必读指南</div>
       </div>
 
       <div>
         <hr class="sidebar-divider" />
-        <div class="toc-title">Sections</div>
         <ul class="toc">
           <li><a href="#org" class="active"><span class="index">I</span>国际组织</a></li>
           <li><a href="#practice"><span class="index">II</span>实践跟踪</a></li>
@@ -625,8 +678,8 @@ section:last-of-type {
       </div>
 
       <div class="sidebar-footer">
-        <div><strong>编辑：</strong>WHUCOIL 资源组</div>
-        <div>更新：2025 版（v3）</div>
+        <div><strong>编辑：</strong>WHUCOIL </div>
+        <div><strong>更新：</strong>v3_updated 2025</div>
       </div>
     </aside>
 
@@ -635,7 +688,7 @@ section:last-of-type {
       <section class="intro" id="top">
         <div class="intro-header">
           <h1 class="intro-title">常用国际投资法网络资源必读指南（第三版）</h1>
-          <div class="intro-badge">Research toolkit</div>
+          <div class="intro-badge">Research Guide</div>
         </div>
         <div class="intro-subtitle">
           
@@ -643,23 +696,24 @@ section:last-of-type {
         <div class="intro-body">
           <div>
             <p>
-              当前，投资已取代贸易，成为全球经济的最大助推力。伴随“走出去”战略、“一带一路”倡议的实施，我国已成为国际资本流动格局中举足轻重的大国。
+              　　当前，投资已取代贸易，成为全球经济的最大助推力。伴随"走出去"战略、"一带一路"倡议的实施，我国已成为国际资本流动格局中举足轻重的大国。
               据联合国贸发会议（UNCTAD）发布的《2025年世界投资报告》显示，2024年中国对外投资流量列全球第三，吸引外资流量也高居全球第四。
             </p>
             <p>
-              与上述趋势相适应，国际投资法正处于发展的黄金时期，国内外对于该领域的学习与研究掀起前所未有的高潮。
-              为方便国内研究者充分利用国际投资法网络资源，武汉大学海外投资法律研究中心（Wuhan University Center of Overseas Investment Law, WHUCOIL）
-              先后于2017年、2021年发布第一、二版《常用国际投资法网络资源必读指南》，并于2025年推出第三版，对常用英文网络资源进行更新和细化。
+              　　与上述趋势相适应，国际投资法正处于发展的黄金时期，国内外对于该领域的学习与研究掀起前所未有的高潮。
+              为方便国内研究者充分利用国际投资法网络资源，<a href="https://coil.whu.edu.cn/cn/index.php" target="_blank" rel="noopener">武汉大学海外投资法律研究中心</a>（Wuhan University Center of Overseas Investment Law, WHUCOIL）
+              先后于2017年、2021年发布第一、二版《常用国际投资法网络资源必读指南》，并于2025年推出第三版，对常用国际投资法网络资源进行更新和细化。
             </p>
           </div>
           <div>
             <p>
-              本页面按照功能，将代表性资源划分为五大板块：国际组织、实践跟踪、观点启发、案例检索与条约检索。
-              每一条目均以卡片形式呈现，突出数据库标题、访问方式、资源特色与推荐指数，便于读者结合自身研究需求作出选择。
+              
             </p>
             <div class="intro-note">
               <span class="intro-note-label">使用提示：</span>
               <span>
+                本页面按照功能，将代表性资源划分为五大板块：<strong>国际组织</strong>、<strong>实践跟踪</strong>、<strong>观点启发</strong>、<strong>案例检索</strong>与<strong>条约检索</strong>。
+              每一条目均以卡片形式呈现，突出数据库标题、访问方式、资源介绍与推荐指数，便于读者结合自身研究需求作出选择。
                 以下分类仅为方便理解与导航之用，各网站在功能与内容上存在交叉重叠。
                 请结合具体研究问题灵活搭配使用不同类型资源。
               </span>
@@ -671,7 +725,6 @@ section:last-of-type {
       <!-- Section I: Organisations -->
       <section id="org">
         <header class="section-header">
-          <div class="section-kicker">Section I</div>
           <h2 class="section-title">
             <span class="index">一</span> 国际组织
           </h2>
@@ -684,15 +737,13 @@ section:last-of-type {
           <!-- UNCTAD -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/unctad.jpg" alt="联合国贸发会议" /> -->
-              <div class="card-image-placeholder">U</div>
+              <img src="1. UNCTAD.png" alt="联合国贸发会议" />
             </div>
             <div class="card-header">
               <div class="card-image">U</div>
               <div class="card-title-group">
                 <h3 class="card-title">联合国贸发会议（UNCTAD）</h3>
-                <div class="card-subtitle">World Investment Report 与投资政策综合平台</div>
+                <div class="card-subtitle">综合型网站</div>
                 <a class="link-badge" href="http://www.unctad.org" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -700,14 +751,12 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                作为联合国机构的官方网站，UNCTAD 几乎每个板块都与国际投资法密切相关。
-                “Topics &rarr; Investment” 集中提供有关 FDI 与跨国企业、国际投资协定、可持续发展投资政策框架、投资政策审查以及投资争端解决的
-                数据、报告与案例等核心研究资源。
+                作为联合国机构的官方网站，UNCTAD几乎每个板块都与国际投资法具有联系。在“主题（Topics）”模块的“投资”部分，可以搜索到很多有关FDI和跨国企业、国际投资协定、可持续发展投资政策框架、投资政策审查、投资争端解决等议题的数据、报告和案例等研究资源。
               </p>
               <ul class="card-list">
-                <li><strong>Investment Policy Hub：</strong>涵盖投资政策框架、投资政策审阅、投资政策监测、投资法规导航、国际投资协定导航与国际投资争端解决导航等六大工具。</li>
-                <li><strong>World Investment Report：</strong>系统呈现全球与地区 FDI 流量与存量，并围绕年度主题分析国际投资政策发展趋势，为政策研究与实证分析提供“五星必读”参考。</li>
-                <li><strong>其他成果：</strong>“负责任农业投资的基本原则”、“UNCTAD 投资便利化全球行动清单”、“UNCTAD 可持续发展投资政策框架”等重要软法文件。</li>
+                <li><strong><a href="https://investmentpolicy.unctad.org/" target="_blank" rel="noopener">Investment Policy Hub</a>：</strong>涵盖投资政策框架（Investment Policy Framework）、投资政策审阅（Investment Policy Reviews）、投资政策监测（Investment Policy Monitor）、投资法规导航（Investment Laws Navigator）、国际投资协定导航（International Investment Agreements Navigator）与国际投资争端解决导航（Investment Dispute Settlement Navigator）等六大工具。</li>
+                <li><strong><a href="https://unctad.org/topic/investment/world-investment-report" target="_blank" rel="noopener">World Investment Report</a>：</strong>通过报告不仅可以了解到每一年度全球、各个地区和重要国家的FDI输入输出数据及多年数据的对比分析，还可通过每一年报告的主题，了解国际投资政策的关注点和发展趋势。</li>
+                <li><strong>其他研究成果：</strong>包括“负责任农业投资的基本原则”、“UNCTAD 投资便利化全球行动清单”、“UNCTAD 可持续发展投资政策框架”等文件。</li>
               </ul>
             </div>
             <div class="card-footer">
@@ -716,7 +765,7 @@ section:last-of-type {
               </div>
               <div class="rating">
                 <span class="stars">★★★★★</span>
-                <span>核心推荐</span>
+                <span>重点推荐</span>
               </div>
             </div>
           </article>
@@ -724,15 +773,13 @@ section:last-of-type {
           <!-- ICSID -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/icsid.jpg" alt="国际投资争端解决中心" /> -->
-              <div class="card-image-placeholder">I</div>
+              <img src="2. ICSID.png" alt="国际投资争端解决中心" />
             </div>
             <div class="card-header">
               <div class="card-image">I</div>
               <div class="card-title-group">
                 <h3 class="card-title">国际投资争端解决中心（ICSID）</h3>
-                <div class="card-subtitle">《ICSID 公约》及仲裁规则官方网站</div>
+                <div class="card-subtitle">最主要的投资争端解决机构</div>
                 <a class="link-badge" href="http://www.worldbank.org/icsid/" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -740,10 +787,10 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                ICSID 网站集中提供《ICSID 公约》及相关程序规则、中心处理过的投资仲裁与调解案件以及所依凭的仲裁/调解规则等，是研究 ISDS 制度设计与实践运作的官方入口。
+                ICSID网站的资源主要包括《ICSID公约》及相关规则，ICSID处理过的案例，以及所依据的仲裁或调解规则等。这些对于国际投资法专业的学习和研究者而言都比较常用，因而也是大家所熟悉的。
               </p>
               <p>
-                通过官网可查阅中心年报、规则修订背景文件及案件统计，为追踪 ICSID 制度演进与案件动态提供权威来源。
+                
               </p>
             </div>
             <div class="card-footer">
@@ -751,8 +798,8 @@ section:last-of-type {
                 <span class="tag">免费访问</span>
               </div>
               <div class="rating">
-                <span class="stars">★★★★☆</span>
-                <span>制度必备</span>
+                <span class="stars">★★★★★</span>
+                <span>研究必备</span>
               </div>
             </div>
           </article>
@@ -760,15 +807,13 @@ section:last-of-type {
           <!-- OECD -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/oecd.jpg" alt="经济合作与发展组织" /> -->
-              <div class="card-image-placeholder">O</div>
+              <img src="3. OECD.png" alt="经济合作与发展组织" />
             </div>
             <div class="card-header">
               <div class="card-image">O</div>
               <div class="card-title-group">
                 <h3 class="card-title">经济合作与发展组织（OECD）</h3>
-                <div class="card-subtitle">投资政策与国际软法枢纽</div>
+                <div class="card-subtitle">投资政策与国际软法</div>
                 <a class="link-badge" href="http://www.oecd.org" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -776,12 +821,12 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                OECD 网站分布着大量与国际投资法相关的新闻、数据、政策报告与专著资源。“Investment” 模块尤其适合研究国际软法、投资与反腐败、绿色投资、投资促进与便利化以及投资与国家安全等议题。
+                作为一个以多元目标为主导的国际组织，OECD网站分散着海量与国际投资法问题有关的新闻、数据、报告、著作等信息和资源。在“主题（topics）”模块的“投资”部分，有关的资源较为集中，且自有其特色。对于国际软法、投资和反腐败、绿色投资、投资促进与便利化、投资与国家安全等问题感兴趣的研究者可在该网站获取以下方面的国际标准、准则、规范。
               </p>
               <ul class="card-list">
                 <li>跨国公司：《跨国公司行动守则》等公司责任与合规框架。</li>
                 <li>投资政策：《投资政策框架》及各国投资政策评审报告。</li>
-                <li>反腐败：《反贿赂公约》及 2009 年建议，为投资与反腐败研究提供权威文本。</li>
+                <li>反腐败：《反贿赂公约》及 2009 年建议。</li>
                 <li>投资促进与便利化：《建立投资便利化的国际框架》。</li>
                 <li>投资与国家安全：《针对与国家安全相关的东道国投资政策的指南》。</li>
               </ul>
@@ -800,9 +845,7 @@ section:last-of-type {
           <!-- UNCITRAL WGIII -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/uncitral.jpg" alt="UNCITRAL 第三工作组" /> -->
-              <div class="card-image-placeholder">U</div>
+              <img src="4. UNCITRAL.png" alt="UNCITRAL 第三工作组" />
             </div>
             <div class="card-header">
               <div class="card-image">U</div>
@@ -834,9 +877,7 @@ section:last-of-type {
           <!-- MIGA -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/miga.jpg" alt="多边投资担保机构" /> -->
-              <div class="card-image-placeholder">M</div>
+              <img src="5. MIGA.png" alt="多边投资担保机构" />
             </div>
             <div class="card-header">
               <div class="card-image">M</div>
@@ -850,7 +891,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                MIGA 网站是研究国际投资风险与海外投资保险制度的重要入口，集中展示 MIGA 公约及评论、附则与业务政策等基础制度文件，并通过年报和《投资担保指南》呈现其对政治风险与担保实践的长期观察。
+                MIGA 网站是研究国际投资风险与海外投资保险制度的重要入口。主页可下载《MIGA公约》及其评论（Commentary on Convention）、《MIGA附则》（MIGA By-Laws）和《业务政策》（Operational Policies）等资料。网站各个模块还有对国际投资政治风险和多边投资保险制度的介绍。此外，“Resources”模块可下载各种语言版本的《MIGA年报》和《投资担保指南（Investment Guarantee Guide）》。
               </p>
             </div>
             <div class="card-footer">
@@ -866,14 +907,13 @@ section:last-of-type {
         </div>
 
         <p class="section-meta">
-          本板块侧重国际组织官方数据与制度文件，适合作为政策分析与制度研究的起点。
+         
         </p>
       </section>
 
       <!-- Section II: Practice -->
       <section id="practice">
         <header class="section-header">
-          <div class="section-kicker">Section II</div>
           <h2 class="section-title">
             <span class="index">二</span> 实践跟踪
           </h2>
@@ -886,9 +926,7 @@ section:last-of-type {
           <!-- IAReporter -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/iareporter.jpg" alt="Investment Arbitration Reporter" /> -->
-              <div class="card-image-placeholder">A</div>
+              <img src="6. investment arbitration reporter.png" alt="Investment Arbitration Reporter" />
             </div>
             <div class="card-header">
               <div class="card-image">A</div>
@@ -913,7 +951,7 @@ section:last-of-type {
             </div>
             <div class="card-footer">
               <div>
-                <span class="tag tag--paid">邮件订阅 · 需付费全文</span>
+                <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
               </div>
               <div class="rating">
                 <span class="stars">★★★★★</span>
@@ -925,15 +963,13 @@ section:last-of-type {
           <!-- TDM -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/tdm.jpg" alt="Transnational Dispute Management" /> -->
-              <div class="card-image-placeholder">T</div>
+              <img src="7. transnational dispute settlement.png" alt="Transnational Dispute Management" />
             </div>
             <div class="card-header">
               <div class="card-image">T</div>
               <div class="card-title-group">
                 <h3 class="card-title">Transnational Dispute Management（TDM）</h3>
-                <div class="card-subtitle">跨国争端管理与投资仲裁期刊</div>
+                <div class="card-subtitle">跨国争端管理期刊</div>
                 <a class="link-badge" href="https://www.transnational-dispute-management.com/welcome.asp" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
                 </a>
@@ -941,11 +977,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                经同行评审的专业期刊，覆盖国际仲裁各方面议题，特别侧重投资仲裁制度与实践。
-                收录内容既包括正式裁决程序，也涵盖调解、ADR、谈判与争端管理等多元机制。
-              </p>
-              <p>
-                除学术文章外，还提供 OGEMID 仲裁讨论论坛及法律与监管资料数据库，便于研究者追踪实务发展并参与专业讨论。
+                TDM是一本经同行评审的专业期刊，涵盖国际仲裁的各个方面，并特别侧重于投资仲裁。其收录的文章既涵盖正式的裁决程序（主要是投资和商业仲裁），也涉及调解和其他非诉讼纠纷解决机制（ADR）、谈判和管理方式，以便有效地管理跨国争端。此外，TDM还提供OGEMID仲裁讨论论坛、法律与监管资料数据库等，供研究者了解仲裁领域前沿信息，并可以参与相关讨论。
               </p>
             </div>
             <div class="card-footer">
@@ -962,9 +994,7 @@ section:last-of-type {
           <!-- GAR -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/gar.jpg" alt="Global Arbitration Review" /> -->
-              <div class="card-image-placeholder">G</div>
+              <img src="8. global abritration review.png" alt="Global Arbitration Review" />
             </div>
             <div class="card-header">
               <div class="card-image">G</div>
@@ -978,20 +1008,20 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                提供国际仲裁领域新闻、专题报告与从业者视角分析。
-                “News &amp; Analysis – Investor-State arbitration” 专栏集中报道投资仲裁潜在争端、程序进展与裁决执行情况，
-                “Trending topics” 针对 ISDS 改革等热点议题作持续跟踪。
+                提供国际仲裁领域的最新资讯和相关报告。
               </p>
-              <p>
-                “GAR Arbitrator Research Tool” 则为仲裁员与律师研究提供结构化信息支持。
-              </p>
+              <ul class="card-list">
+                <li><strong>News &amp; Analysis – Investor-State arbitration：</strong>获取与投资仲裁相关的最新报道，内容涵盖潜在争端、仲裁情况、裁决执行等。</li>
+                <li><strong>News &amp; Analysis - Trending topics：</strong>提供时下热门的与仲裁有关的议题（如"ISDS改革"）的简讯及分析。</li>
+                <li><strong>GAR Arbitrator Research Tool：</strong>获取全球国际仲裁执业人员的详细信息。</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div>
                 <span class="tag tag--paid">机构订阅 · 需购买数据库</span>
               </div>
               <div class="rating">
-                <span class="stars">★★★☆☆</span>
+                <span class="stars">★★★★☆</span>
                 <span>资讯补充</span>
               </div>
             </div>
@@ -1000,9 +1030,7 @@ section:last-of-type {
           <!-- Kluwer Arbitration Blog -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/kluwer-blog.jpg" alt="Kluwer Arbitration Blog" /> -->
-              <div class="card-image-placeholder">K</div>
+              <img src="9. Kluwer arbitration blog.png" alt="Kluwer Arbitration Blog" />
             </div>
             <div class="card-header">
               <div class="card-image">K</div>
@@ -1016,8 +1044,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                由国际商事仲裁与投资者—国家仲裁领域的领先执业人士撰写深度评论，聚焦最新案例、制度发展与各国司法实践。
-                文章支持按关键词、司法辖区、作者与日期等多维度检索，便于研究者快速锁定相关讨论。
+                Kluwer Arbitration Blog 定期发布由国际商事仲裁和投资者—国家仲裁领域领先执业人士撰写的深度评论文章。文章可通过关键词进行检索，并可按类别、司法辖区、作者和日期进行浏览。
               </p>
             </div>
             <div class="card-footer">
@@ -1036,7 +1063,6 @@ section:last-of-type {
       <!-- Section III: Insights -->
       <section id="insights">
         <header class="section-header">
-          <div class="section-kicker">Section III</div>
           <h2 class="section-title">
             <span class="index">三</span> 观点启发
           </h2>
@@ -1049,9 +1075,7 @@ section:last-of-type {
           <!-- bilaterals.org -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/bilaterals.jpg" alt="bilaterals.org" /> -->
-              <div class="card-image-placeholder">B</div>
+              <img src="10. bilaterals.png" alt="bilaterals.org" />
             </div>
             <div class="card-header">
               <div class="card-image">B</div>
@@ -1088,9 +1112,7 @@ section:last-of-type {
           <!-- CCSI -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/ccsi.jpg" alt="哥伦比亚可持续投资中心" /> -->
-              <div class="card-image-placeholder">C</div>
+              <img src="11. CCSI.png" alt="哥伦比亚可持续投资中心" />
             </div>
             <div class="card-header">
               <div class="card-image">C</div>
@@ -1104,11 +1126,11 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                由哥伦比亚大学法学院与地球研究院联合设立，聚焦采掘业投资、土地与农业投资、投资法律与政策、投资与人权、能源改革与投资等关键交叉议题。
+                哥伦比亚可持续投资中心（CCSI）由哥伦比亚大学法学院与哥伦比亚大学地球研究院联合创建，致力于推动可持续投资的政策与实践发展。对于国际投资法的研究者而言，网站可利用的资源最直接的就是中心所做的有关可持续投资的研究，其中最重要的是其当前重点关注的投资相关议题（如目前中心所关注的采掘业投资、土地和农业投资、投资法律与政策、投资与人权、能源改革与投资等）。对前述议题感兴趣的研究者可通过CCSI提供的相关合作性对话与专家谈话、政策和咨询意见、研究项目介绍等，了解研究的具体方向方法，以及可利用的资源和工具。其他研究成果大多也可以查阅，包括书、报告、文章，甚至工作备忘录和笔记都是公开的。
               </p>
-              <p>
-                平台通过政策建议、项目研究、专家对话与工作备忘录等多种形式输出研究成果，其中 “Columbia FDI Perspectives” 以短文形式持续推进围绕 FDI 的公开辩论，并提供中英文版本。
-              </p>
+              <ul class="card-list">
+                <li><strong>"<a href="https://ccsi.columbia.edu/investment-perspectives" target="_blank" rel="noopener">CCSI Investment Perspectives</a>"：</strong>是一个公开辩论的论坛，不定期发布与FDI相关的短篇文章，除英文版外，还提供中文版。</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div>
@@ -1124,9 +1146,7 @@ section:last-of-type {
           <!-- IISD -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/iisd.jpg" alt="国际可持续发展研究所" /> -->
-              <div class="card-image-placeholder">I</div>
+              <img src="12. IISD.png" alt="国际可持续发展研究所" />
             </div>
             <div class="card-header">
               <div class="card-image">I</div>
@@ -1140,12 +1160,11 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                以可持续发展为核心使命的独立研究机构，强调投资在实现可持续发展目标中的关键作用。
-                针对现有国际投资规则与政策可能对可持续发展造成的约束，IISD 提供系统性改进方案与工具。
+                作为一个以可持续发展为目标的独立研究机构，国际可持续发展研究所强调投资对于可持续发展的重要性，并由此开展许多可持续发展相关投资问题的研究。考虑到当前有关投资的法律、政策和国际法规则并不都是有利于可持续发展的，研究所专门从可持续发展这一视角研究投资问题，为完善投资法律和政策，以促进可持续发展，提供方法支持。
               </p>
-              <p>
-                在 “Investment Law &amp; Policy” 模块可获取 Investment Treaty News、专家会议报告等资源，是进入“可持续发展 × 投资法”领域的优质入口。
-              </p>
+              <ul class="card-list">
+                <li>在该网站"Focus Areas - Topics"模块"Investment Law &amp; Policy"部分，可以查阅相关期刊、报告等研究成果，如关于投资协定研究的Investment Treaty News、关于投资争端解决的专家会议的报告等等。对于研究和关注可持续发展视角下的投资问题的用户来说，该网站是一个不错的选择。</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div>
@@ -1161,9 +1180,7 @@ section:last-of-type {
           <!-- Kluwer Arbitration (database) -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/kluwer.jpg" alt="Kluwer Arbitration" /> -->
-              <div class="card-image-placeholder">K</div>
+              <img src="13. Kluwer arbitration.png" alt="Kluwer Arbitration" />
             </div>
             <div class="card-header">
               <div class="card-image">K</div>
@@ -1177,15 +1194,14 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                由国际商事仲裁委员会、常设仲裁法院、国际仲裁学会与 Kluwer Law International 联合推出的在线数据库，
-                针对国际商事与投资仲裁提供全面覆盖。
+                威科国际商事仲裁在线数据库由国际商事仲裁委员会、常设仲裁法庭、国际仲裁学会以及Kluwer Law International机构联合推出，为国际投资法研究者提供最新资料。
               </p>
               <ul class="card-list">
-                <li>超过 2000 份双边投资协定（BITs）原文与索引。</li>
-                <li>5000 余条法院判决与 2000 余份仲裁裁决。</li>
-                <li>基于“纽约公约判决工具”的公约检索功能。</li>
-                <li>197 个国家/地区的仲裁组织、BITs、案例与相关立法信息。</li>
-                <li>100 余本专著与多种仲裁专业期刊等权威评论资料。</li>
+                <li><strong>双边投资协定(BITs)：</strong>超过2000条双边投资协定原文。</li>
+                <li><strong>裁决（Awards）及判例（Case Law）：</strong>收录超过5000条法庭决议以及2000余项仲裁裁决。</li>
+                <li><strong>公约（Convention）：</strong>通过全新的"纽约公约判决工具"帮助搜索判决案例，浏览大部分仲裁条约全文。</li>
+                <li><strong>各国信息（Jurisdictions）：</strong>197个国家及地区的仲裁组织结构、BITs、法庭判决案例、相关立法、裁决和法规。</li>
+                <li><strong>评论（Commentary）：</strong>有关仲裁领域的权威出版物，包括100多本书籍、8种仲裁专业期刊等。</li>
               </ul>
             </div>
             <div class="card-footer">
@@ -1204,12 +1220,11 @@ section:last-of-type {
       <!-- Section IV: Cases -->
       <section id="cases">
         <header class="section-header">
-          <div class="section-kicker">Section IV</div>
           <h2 class="section-title">
             <span class="index">四</span> 案例检索
           </h2>
           <p class="section-desc">
-            围绕 ISDS 实务的官方与商用数据库，为判例研究、经验总结与实证分析提供一手数据。
+            围绕 ISDS 实务的案例数据库，为判例研究、经验总结与实证分析提供数据支持。
           </p>
         </header>
 
@@ -1217,9 +1232,7 @@ section:last-of-type {
           <!-- ICSID case database -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/icsid.jpg" alt="ICSID 案例数据库" /> -->
-              <div class="card-image-placeholder">I</div>
+              <img src="14. ICSID案例数据库.png" alt="ICSID 案例数据库" />
             </div>
             <div class="card-header">
               <div class="card-image">I</div>
@@ -1233,9 +1246,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                由 ICSID 官方建立并维护，是研究 ISDS 的核心原始数据来源。
-                包含案件基本信息、程序进展、管辖与实体裁决、和解结果以及委员会成员信息等，
-                涵盖《ICSID 公约》项下案件以及依据 UNCITRAL 等其他规则审理的部分投资仲裁案件。
+                ICSID案例数据库是由ICSID建立的官方数据库，系统收录并公开发布与投资仲裁相关的权威资料。数据库内容涵盖案件基本信息、程序进展、管辖权决定、实体裁决、和解结果以及委员会成员信息等，是研究投资者—东道国争端解决机制最重要的原始数据来源之一。
               </p>
             </div>
             <div class="card-footer">
@@ -1252,9 +1263,7 @@ section:last-of-type {
           <!-- UNCTAD dispute navigator -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/unctad-dispute.jpg" alt="UNCTAD 投资争端解决导航" /> -->
-              <div class="card-image-placeholder">U</div>
+              <img src="15. UNCTAD 投资争端解决导航.png" alt="UNCTAD 投资争端解决导航" />
             </div>
             <div class="card-header">
               <div class="card-image">U</div>
@@ -1268,11 +1277,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                覆盖已知国际投资仲裁案件，支持按案件名称、年份、国家、行业、条约、机构、仲裁员、损害赔偿与后续程序等多维度筛选，
-                便于快速构建案件样本与开展统计分析。
-              </p>
-              <p>
-                需注意其更新节奏可能滞后于部分机构或商用数据库，应与其他来源结合交叉验证。
+                国际投资争端解决导航（Investment Dispute Settlement Navigator），涵盖已知的国际投资仲裁案件，研究者可通过过滤器（包括：案件名称、年份、国家、行业、条约、机构、仲裁员、损害赔偿、违反情况、后续程序）筛选所需案件，获得相关案件的具体信息。但限于更新速度，UNCTAD案例库的统计结果可能存在一定滞后性。
               </p>
             </div>
             <div class="card-footer">
@@ -1280,7 +1285,7 @@ section:last-of-type {
                 <span class="tag">免费访问</span>
               </div>
               <div class="rating">
-                <span class="stars">★★★★☆</span>
+                <span class="stars">★★★★★</span>
                 <span>统计利器</span>
               </div>
             </div>
@@ -1289,9 +1294,7 @@ section:last-of-type {
           <!-- ITA Law -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/italaw.jpg" alt="ITA Law" /> -->
-              <div class="card-image-placeholder">L</div>
+              <img src="16. ITALAW.png" alt="ITA Law" />
             </div>
             <div class="card-header">
               <div class="card-image">L</div>
@@ -1305,12 +1308,13 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                汇集投资条约、投资法与投资者—东道国仲裁相关文书的综合数据库。
-                用户可在首页跟进最新裁决，在 “Browse” 模块按案由类别检索，在 “Search” 模块查找针对特定案件的各类文档。
+                网站是一个关于投资条约、国际投资法和投资者-东道国投资仲裁的具有综合性的网络数据库，提供的资源主要都关于投资仲裁，因此非常有利于案例搜索。
               </p>
-              <p>
-                “Resources” 板块同时提供欧盟投资政策文件、条约链接与新近出版物，适合作为判例研究与政策文件检索的补充来源。
-              </p>
+              <ul class="card-list">
+                <li>在"Browse"模块根据案件的分类查找所需的案例</li>
+                <li>在"Search"模块找到有关案件的各种文件。</li>
+                <li>"Resources"模块还提供欧盟投资政策文件、投资条约、其他资源的链接和与投资法有关的最新著作。</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div>
@@ -1318,7 +1322,7 @@ section:last-of-type {
               </div>
               <div class="rating">
                 <span class="stars">★★★★☆</span>
-                <span>案例拓展</span>
+                <span>案例检索</span>
               </div>
             </div>
           </article>
@@ -1326,9 +1330,7 @@ section:last-of-type {
           <!-- Jus Mundi -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/jusmundi.jpg" alt="Jus Mundi" /> -->
-              <div class="card-image-placeholder">J</div>
+              <img src="17. Jus Mundi.png" alt="Jus Mundi" />
             </div>
             <div class="card-header">
               <div class="card-image">J</div>
@@ -1341,20 +1343,19 @@ section:last-of-type {
               </div>
             </div>
             <div class="card-body">
-              <p>
-                在国际投资法研究上提供国际条约、仲裁规则与投资仲裁案件三大类资源，
-                通过细化的过滤器与结构化元数据大幅提升检索效率。
-              </p>
-              <p>
-                其 Wiki Notes 由经验丰富的学者与执业者撰写，可围绕具体法律概念快速定位关键问题及关联判例，是梳理概念谱系与主流观点的实用工具。
-              </p>
+              <ul class="card-list">
+                <li><strong>国际条约：</strong>可利用过滤器进行精确检索。</li>
+                <li><strong>仲裁规则：</strong>可精确检索，找到仲裁规则的完整文本，及"指南"和"条款草案"。</li>
+                <li><strong>国际投资仲裁案件：</strong>可通过过滤器（包括案件类型、仲裁机构、适用条约、行业等）缩小研究范围。</li>
+                <li><strong>研究指导工具：</strong>提供了 Wiki Notes，由投资仲裁领域经验丰富的学者和从业律师/仲裁员撰写。研究者可以快速锁定投资仲裁法律概念中的关键问题，并即时访问每个法律概念最新最相关的案例。</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div>
                 <span class="tag tag--mixed">部分开放 · 高级功能需订阅</span>
               </div>
               <div class="rating">
-                <span class="stars">★★★★☆</span>
+                <span class="stars">★★★★★</span>
                 <span>智能检索</span>
               </div>
             </div>
@@ -1363,9 +1364,7 @@ section:last-of-type {
           <!-- ISLG -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/islg.jpg" alt="ISLG 投资者—东道国争端解决法律指南" /> -->
-              <div class="card-image-placeholder">S</div>
+              <img src="18. ISLG 投资者—东道国争端解决法律指南.png" alt="ISLG 投资者—东道国争端解决法律指南" />
             </div>
             <div class="card-header">
               <div class="card-image">S</div>
@@ -1379,12 +1378,12 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                以投资条约法与 ISDS 案例研究为核心的专业数据库，特别适合围绕具体条款与法律概念进行精细化检索。
+                该数据库是一个有关投资条约法研究，尤其是投资者-东道国投资争端解决案例研究的网络数据库。其特点如下：
               </p>
-              <p>
-                “Subject Navigator” 将“公平与公正待遇”等关键议题细化为可检索单元，帮助用户快速定位裁决中的相关段落，
-                同时就 ICSID、NAFTA 及其他仲裁庭公开裁决提供完整文件目录与文本。
-              </p>
+              <ul class="card-list">
+                <li><strong>搜索工具非常强大，搜索精确度高。</strong>以其中的一种工具"Subject Navigator"为例，它列出了国际投资法的重要问题（subjects），用户可根据研究的需要，选择subject，如"公平公正待遇"，找到与之相关的仲裁案件裁决的特定段落。此外，通过其他其中工具，用户还可以找到投资仲裁庭对于某个投资条约条款的解释、有关的先例，投资条约或投资法庭对某个术语的定义或解释，等等；</li>
+                <li><strong>资料全面。</strong>所有与已公开的ICSID、NAFTA和其他临时仲裁庭所做的裁决有关的文件和资料都能在该数据库的文件目录中找到，用户可根据需要筛选。</li>
+              </ul>
             </div>
             <div class="card-footer">
               <div>
@@ -1400,9 +1399,7 @@ section:last-of-type {
           <!-- Oxford Investment Claims -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/oxford.jpg" alt="Oxford Investment Claims" /> -->
-              <div class="card-image-placeholder">O</div>
+              <img src="19. oxford investment claims.png" alt="Oxford Investment Claims" />
             </div>
             <div class="card-header">
               <div class="card-image">O</div>
@@ -1443,7 +1440,6 @@ section:last-of-type {
       <!-- Section V: Treaties -->
       <section id="treaties">
         <header class="section-header">
-          <div class="section-kicker">Section V</div>
           <h2 class="section-title">
             <span class="index">五</span> 条约检索
           </h2>
@@ -1456,9 +1452,7 @@ section:last-of-type {
           <!-- UNCTAD IIA Navigator -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/unctad-iia.jpg" alt="UNCTAD International Investment Agreements Navigator" /> -->
-              <div class="card-image-placeholder">U</div>
+              <img src="20. UNCTAD international investment agreement navigator.png" alt="UNCTAD International Investment Agreements Navigator" />
             </div>
             <div class="card-header">
               <div class="card-image">U</div>
@@ -1472,11 +1466,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                覆盖现有双边投资协定及与投资有关的其他协定，提供协定状态、签署与生效日期、条约关系与文本链接等关键信息。
-              </p>
-              <p>
-                可按国家或区域组织（如中国、欧盟）进行筛选，快速生成该主体参与的 IIA 概览；
-                部分协定通过 IIA Mapping Project 提供条款层面的结构化信息，如 MFN 条款、“日落条款”期限等。
+                国际投资协定导航（International Investment Agreements Navigator），覆盖现有双边投资协定及与投资有关的其他协定，且提供了协定状态、签署日期、生效日期、协定文本、条约关系等信息。此外，研究者可将某一国家（如中国）或国家联盟（如欧盟）作为检索条件，获取该国家或联盟所参与的国际投资协定概况。国际投资协定导航中，部分协定已在UNCTAD投资协定分析项目（IIA Mapping Project）中被妥善梳理，研究者可在界面中直观、迅速地获取相关协定在序言、实体条款及程序条款上的规定情况，如是否包含MFN条款、"日落条款"的期限等。
               </p>
             </div>
             <div class="card-footer">
@@ -1493,9 +1483,7 @@ section:last-of-type {
           <!-- EDIT -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/edit.jpg" alt="EDIT 投资条约电子数据库" /> -->
-              <div class="card-image-placeholder">E</div>
+              <img src="21. EDIT 投资条约电子数据库.png" alt="EDIT 投资条约电子数据库" />
             </div>
             <div class="card-header">
               <div class="card-image">E</div>
@@ -1509,8 +1497,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                SNIS 资助项目“国际法的扩散：国际投资协议的文本分析”成果之一，致力于通过提供广覆盖的 IIA 全文，
-                促进基于证据的改革与制度研究。
+                投资条约电子数据库（EDIT）是伯尔尼大学提供的免费学术资源。它是在 SNIS 资助的项目“国际法的扩散：国际投资协议的文本分析”（2015-2017年）的实施过程中开发的。不同于其他条约数据库，EDIT是一个全新的国际投资协定（IIA）的综合全文数据库，致力于通过提供迄今为止最广泛的国际投资协定文本，促进知情的公共讨论、基于证据的改革和国际投资制度的学术研究。
               </p>
               <ul class="card-list">
                 <li><strong>全面：</strong>收录 3400 余份 IIA 文本，包括元数据、脚注、附件与附函。</li>
@@ -1533,14 +1520,12 @@ section:last-of-type {
           <!-- MOFCOM BIT list -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/mofcom-bit.jpg" alt="商务部：我国对外签订双边投资协定一览表" /> -->
-              <div class="card-image-placeholder">M</div>
+              <img src="22. 我国对外签订双边投资协定一览表.png" alt="我国对外签订双边投资协定一览表" />
             </div>
             <div class="card-header">
               <div class="card-image">M</div>
               <div class="card-title-group">
-                <h3 class="card-title">商务部：我国对外签订双边投资协定一览表</h3>
+                <h3 class="card-title">我国对外签订双边投资协定一览表</h3>
                 <div class="card-subtitle">中国 BIT 官方清单</div>
                 <a class="link-badge" href="https://tfs.mofcom.gov.cn/gjk/art/2011/art_20513f4a33d64e528279070a25d63050.html" target="_blank" rel="noopener">
                   <span class="icon">↗</span><span>访问网站</span>
@@ -1549,8 +1534,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                由商务部条约法律司维护的官方清单，系统列示中国政府与各国（或地区）签署的 BIT 名称、签署与生效日期及相关备注，
-                是梳理中国对外投资条约网络的权威起点。
+                “我国对外签订双边投资协定一览表”是由商务部条约法律司维护公布的官方文献，系统列示了中国政府与世界各国（或地区）签署的双边投资协定（BIT）的名称、签署日期、生效日期及备注等基本信息。该一览表覆盖多个大洲、上百个国家／地区。
               </p>
             </div>
             <div class="card-footer">
@@ -1567,9 +1551,7 @@ section:last-of-type {
           <!-- MOFCOM FTA portal -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/mofcom-fta.jpg" alt="中国自由贸易区服务网" /> -->
-              <div class="card-image-placeholder">F</div>
+              <img src="23. 中国自由贸易区服务网.png" alt="中国自由贸易区服务网" />
             </div>
             <div class="card-header">
               <div class="card-image">F</div>
@@ -1583,8 +1565,7 @@ section:last-of-type {
             </div>
             <div class="card-body">
               <p>
-                由商务部主办，集中发布中国签署的各类 FTA / RTA 文本、解释与实施情况，
-                并提供贸易、投资、服务开放、原产地规则与关税安排等配套信息，是研究中国参与区域经济安排的基础平台。
+                中国自由贸易区服务网是由 中华人民共和国商务部（MOFCOM）主办、其国际经贸关系司管理并对外提供服务的官方平台，旨在公开、系统、集中地发布中国签署的各类自由贸易协定（FTA）／区域经贸协定（RTA）的文本、解释、实施情况以及相关贸易、投资、服务开放、原产地规则、关税安排等配套信息。
               </p>
             </div>
             <div class="card-footer">
@@ -1601,25 +1582,22 @@ section:last-of-type {
           <!-- ICSID Convention -->
           <article class="card">
             <div class="card-image-container">
-              <!-- 图片占位符，可以替换为实际图片 -->
-              <!-- <img src="images/icsid-convention.jpg" alt="《ICSID 公约》官方网站" /> -->
-              <div class="card-image-placeholder">C</div>
+              <img src="24. 《华盛顿公约》.png" alt="《华盛顿公约》" />
             </div>
             <div class="card-header">
               <div class="card-image">C</div>
               <div class="card-title-group">
-                <h3 class="card-title">《ICSID 公约》官方网站</h3>
-                <div class="card-subtitle">华盛顿公约及成员国信息</div>
-                <!-- 链接可根据实际需要补充官方 URL -->
+                <h3 class="card-title">《华盛顿公约》</h3>
+                <div class="card-subtitle">公约文本及成员国信息</div>
+                <a class="link-badge" href="https://icsid.worldbank.org/resources/rules-and-regulations/convention/overview" target="_blank" rel="noopener">
+                  <span class="icon">↗</span><span>访问网站</span>
+                </a>
               </div>
             </div>
             <div class="card-body">
               <p>
                 系统呈现 1965 年《解决国家与其他国家国民之间投资争端公约》（“华盛顿公约”）的官方文本与历史资料，
-                包括英文、法文、西班牙文版本及 18 种其他语言的非官方译本。
-              </p>
-              <p>
-                网站同时提供 ICSID 成员国数据库、年度报告与案件量统计，以及四卷本公约编年史，是研究 ISDS 制度渊源与演变不可替代的基础资源。
+                包括英文、法文、西班牙文版本及 18 种其他语言的非官方译本。网站同时提供 ICSID 成员国数据库、年度报告与案件量统计，以及四卷本公约编年史，是研究 ISDS 制度渊源与演变不可替代的基础资源。
               </p>
             </div>
             <div class="card-footer">
@@ -1638,8 +1616,8 @@ section:last-of-type {
       <!-- Footer -->
       <footer class="footer">
         <div>
-          <strong>资料来源：</strong>
-          武汉大学海外投资法律研究中心（WHUCOIL），黄丽萍整理（2017_v1），黄可而更新（2021_v2；2025_v3），漆彤校对。
+          <strong>资料整理：</strong>
+          <a href="https://coil.whu.edu.cn/cn/index.php" target="_blank" rel="noopener">武汉大学海外投资法律研究中心</a>（WHUCOIL），黄丽萍整理（2017_v1），<a href="https://keerh1997.github.io/" target="_blank" rel="noopener">黄可而</a>更新（2021_v2；2025_v3），<a href="https://law.whu.edu.cn/info/1234/5249.htm" target="_blank" rel="noopener">漆彤</a>校对。
         </div>
         <div>
           <strong>联系邮箱：</strong> keerhuang1997@gmail.com
